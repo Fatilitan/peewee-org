@@ -109,7 +109,7 @@ def add_dish_to_menu() -> models.Dish:
         }
     )
 
-    kaas = models.Ingredient.get_or_create(
+    kaas, _ = models.Ingredient.get_or_create(
         name='cheese',
         defaults={
             'is_vegetarian': True,
